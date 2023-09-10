@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@500&family=Luckiest+Guy&family=Source+Code+Pro&family=Tektur&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  
+}
+
+::selection {
+  background: #A15F5F;
+}
+
+body {
+  margin: 0;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(179,27,27,1) 0%, rgba(201,45,45,1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.load {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+}
+
+.loader {
+    border-top: 8px solid rgba(3, 3, 3, 0.5);
+    border-radius: 60%;
+  position: fixed;
+    width: 80px;
+    height: 80px;
+    animation: spin 2s linear infinite;
+}
+
+.loader1 {
+    border-top: 8px solid rgba(3, 3, 3, 0.6);
+    border-radius: 70%;
+  position: fixed;
+    width: 100px;
+    height: 100px;
+    animation: spin1 3s linear infinite;
+}
+
+.loader2 {
+    border-top: 8px solid rgba(3, 3, 3, 0.7);
+    border-radius: 80%;
+  position: fixed;
+    width: 120px;
+    height: 120px;
+    animation: spin 3s linear infinite;
+}
+
+.loader3 {
+    border-top: 8px solid rgba(3, 3, 3, 0.8);
+    border-radius: 90%;
+  position: fixed;
+    width: 140px;
+    height: 140px;
+    animation: spin1 4s linear infinite;
+}
+
+.load1 {
+  width: 150px;
+  height: 150px;
+  position: fixed;
+  border-radius: 90%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.carg {
+  position: fixed;
+  top: 65%;
+  width: auto;
+  height: auto;
+  border-radius: 30px;
+  padding: 10px 10px;
+  background-color: rgba(3, 3, 3, 0.2);
+  animation: agranda 1s infinite;
+}
+
+.carg p {
+  color: white;
+  font-size: 30px;
+  animation: parpadeo 1s infinite;
+}
+
+@keyframes agranda {
+  25%, 75% { transform: scale(1);}
+  0%, 50%, 100% { transform: scale(1.1);}
+}
+
+@keyframes parpadeo {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes spin1 {
+    0% { transform: rotate(360deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.loader-wrapper.hidden {
+    display: none;
+}
+
+.namelog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.namelog1 {
+  background: linear-gradient(93deg, rgba(155,83,28,1) 0%, rgba(243,136,65,1) 74%);
+  position: fixed;
+  width: 400px;
+  height: 200px;
+  display: block;
+  align-content: center;
+  justify-content: center;
+  border: 2px solid black;
+  border-radius: 25px;
+}
+
+.namelog1 .label1 {
+  background-color: #d16615;
+  width: auto;
+  padding: 20px 20px;
+  font-size: 30px;
+  border-radius: 25px 25px 0px 0px;
+  text-align: center;
+  font-family: 'Tektur', cursive;
+}
+
+.namelog1 p {
+  font-size: 15px;
+  font-family: 'Source Code Pro', monospace;
+  text-align: center;
+  background-color: #FFD098;
+  width: auto;
+  
+}
+
+.namelog1 input {
+  background-color: #FFD098;
+  border: none;
+  margin: 20px 10px;
+  padding: 20px;
+  width: 300px;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 5px;
+  outline: none;
+  font-family: 'Source Code Pro', monospace;
+}
+
+.namelog1 input:focus {
+  box-shadow: 0.2rem 0.8rem 1.6rem rgba(229, 190, 128, 0.5);
+}
+.namelog1 input::placeholder {
+  font-size: 15px;
+  font-weight: bold;
+  color:black;
+}
+
+.namelog1 button {
+  background-color: #FFB740;
+  width: auto;
+  height: 50px;
+  border-radius: 25px;
+  padding: 10px 10px;
+  font-family: 'Tektur', cursive;
+  align-items: center;
+  border: 2px solid #C5861F;
+}
+
+.namelog1 button:hover {
+  cursor: pointer;
+  background-color: #C5861F;
+  box-shadow: 0.2rem 0.8rem 1.6rem rgba(0, 0, 0, 1);
+}
+
+.namelog1.hidden {
+    display: none;
+}
+
+.marco {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+background: linear-gradient(0deg, rgba(155,28,28,1) 20%, rgba(243,117,65,1) 80%);
+}
+
+.marco .frases {
+  width: auto;
+  height: 69px;
+  background: #F37541;
+}
+
+.frase {
+  font-family: 'Luckiest Guy', cursive;
+  font-size:20px;
+  text-align: center;
+  padding: 20px;
+}
+
+.contenido {
+  height: 70vh;
+  width: auto;
+  background-image: url(images/background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenido .section1, .section2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 50px;
+}
+
+.contenido .nameu, .namec {
+  font-size: 25px;
+  width: auto;
+  height: 40px;
+  background-color: #FFAD68;
+  font-family: 'Handjet', cursive;
+  padding: 5px 30px;
+  text-align: center;
+  border-radius: 50px;
+  border: 2px dashed black;
+}
+
+.contenido .vidau1, .vidau2 {
+  text-align: center;
+  background-color: #FF6060;
+  height: 40px;
+  width: auto;
+  font-size: 25px;
+  padding: 5px 20px;
+  font-family: 'Handjet', cursive;
+  border-radius: 50px;
+  border: 2px dashed black;
+}
+
+.contenido .psj1, .psj2 {
+  max-width: 40vh;
+  height: 50vh;
+  margin: 10px;
+}
+
+.contenido .mensaje1 {
+  position: fixed;
+  width: 100%;
+    height: 70vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  text-align: center;
+  z-index: -1;
+}
+
+.msj1 h1 span {
+  font-family: "Luckiest Guy", cursive;
+  position: relative;
+  top: 20px;
+  display: inline-block;
+  -webkit-animation: bounce 0.3s ease infinite alternate;
+  font-size: 100px;
+  color: #fff;
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+    0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
+    0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 1);
+}
+
+.msj1 h1 span:nth-child(2) {
+  -webkit-animation-delay: 0.1s;
+}
+
+.msj1 h1 span:nth-child(3) {
+  -webkit-animation-delay: 0.2s;
+}
+
+.msj1 h1 span:nth-child(4) {
+  -webkit-animation-delay: 0.3s;
+}
+
+.msj1 h1 span:nth-child(5) {
+  -webkit-animation-delay: 0.1s;
+}
+
+.msj1 h1 span:nth-child(6) {
+  -webkit-animation-delay: 0.2s;
+}
+
+.msj1 h1 span:nth-child(7) {
+  -webkit-animation-delay: 0.3s;
+}
+
+.msj1 h1 span:nth-child(8) {
+  -webkit-animation-delay: 0.4s;
+}
+
+.msj1 h1 span:nth-child(9) {
+  -webkit-animation-delay: 0.5s;
+}
+
+.msj1 h1 span:nth-child(10) {
+  -webkit-animation-delay: 0.6s;
+}
+
+.msj1 h1 span:nth-child(11) {
+  -webkit-animation-delay: 0.7s;
+}
+
+.mensaje2 {
+  position: fixed;
+    width: 100%;
+    height: 70vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  text-align: center;
+    z-index: -1;
+}
+
+.msj2 h1 span {
+  font-family: "Luckiest Guy", cursive;
+  position: relative;
+  top: 20px;
+  display: inline-block;
+  -webkit-animation: bounce 0.3s ease infinite alternate;
+  font-size: 100px;
+  color: #fff;
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+    0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
+    0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 1);
+}
+
+.msj2 h1 span:nth-child(2) {
+  -webkit-animation-delay: 0.1s;
+}
+
+.msj2 h1 span:nth-child(3) {
+  -webkit-animation-delay: 0.2s;
+}
+
+.msj2 h1 span:nth-child(4) {
+  -webkit-animation-delay: 0.3s;
+}
+
+.msj2 h1 span:nth-child(5) {
+  -webkit-animation-delay: 0.1s;
+}
+
+.msj2 h1 span:nth-child(6) {
+  -webkit-animation-delay: 0.2s;
+}
+
+.msj2 h1 span:nth-child(7) {
+  -webkit-animation-delay: 0.3s;
+}
+
+.msj2 h1 span:nth-child(8) {
+  -webkit-animation-delay: 0.4s;
+}
+
+.msj2 h1 span:nth-child(9) {
+  -webkit-animation-delay: 0.5s;
+}
+
+.msj2 h1 span:nth-child(10) {
+  -webkit-animation-delay: 0.6s;
+}
+
+.msj2 h1 span:nth-child(11) {
+  -webkit-animation-delay: 0.7s;
+}
+
+@-webkit-keyframes bounce {
+  100% {
+    top: -20px;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+      0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc,
+      0 50px 25px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.decisiones {
+  height: 20vh;
+  background: #9B1C1C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.decisiones .reiniciar, .op {
+  margin: 10px;
+  font-size: 30px;
+  cursor: pointer;
+  color: black;
+  font-family: 'Tektur', cursive;
+}
+
+.decisiones .op {
+  padding: 10px 20px;
+  border: 2px solid #ff2424;
+  background: linear-gradient(-45deg, #ED2A2A 25%, #ED832D 25%, #ED832D 50%, #ED2A2A 50%, #ED2A2A 75%, #ED832D 75%, #ED832D);
+  background-size: 40px 40px;
+  background-position: 0 0;
+  border-radius: 20px;
+}
+
+.decisiones .op:hover {
+  animation: nose 1s linear infinite;
+  filter: brightness(95%);
+  box-shadow: 0 0 20px rgba(102, 0, 0, 1);
+  transform: scale(1);
+}
+
+.decisiones .reiniciar {
+  border: 3px solid #940000;
+  background-color: #CA2D2D;
+  padding: 10px 5px;
+  border-radius: 20px;
+}
+
+.decisiones .reiniciar:hover {
+  box-shadow: 0 0 20px rgba(102, 0, 0, 1);
+  animation: scaleAnimation 1s infinite alternate;
+}
+
+@keyframes nose {
+  100% {
+    background-position: 40px 0, 40px 0, 40px 0;
+  }
+}
+
+@keyframes scaleAnimation {
+  from {
+    transform: scale(1);
+    filter: brightness(80%);
+    color: white;
+  }
+  to {
+    transform: scale(1.1);
+    filter: brightness(100%);
+    color: black;
+  }
+}
